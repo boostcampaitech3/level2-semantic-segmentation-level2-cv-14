@@ -1,5 +1,5 @@
 ---
-name: 실험
+name: 실험 템플릿
 about: 프로젝트와 관련된 실험과 관련된 Template
 title: '[실험]'
 labels: '🥼실험, ⚡에픽'
