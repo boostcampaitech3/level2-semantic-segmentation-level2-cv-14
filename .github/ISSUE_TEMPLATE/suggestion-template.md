@@ -1,5 +1,5 @@
 ---
-name: Suggestion
+name: 제안
 about: 프로젝트와 관련된 내용을 제안하는 Template
 title: '[제안]'
 labels: '🥸제안, ⚡에픽'

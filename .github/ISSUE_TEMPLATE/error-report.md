@@ -1,5 +1,5 @@
 ---
-name: Error report
+name: 버그
 about: 버그와 관련된 template
 title: '[버그]'
 labels: '🪲버그, ⚡에픽'
