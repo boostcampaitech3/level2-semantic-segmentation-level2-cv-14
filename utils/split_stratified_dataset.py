@@ -51,14 +51,14 @@ def main(args):
 
         train_dict["images"] = np.array(images)[train_index].tolist()
         val_dict["images"] = np.array(images)[val_index].tolist()
-        
+
         train_dict["annotations"] = annotations_df[
             annotations_df["image_id"].isin(train_index)
         ].to_dict("records")
         val_dict["annotations"] = annotations_df[
             annotations_df["image_id"].isin(val_index)
         ].to_dict("records")
-        
+
         train_dir = os.path.join(path, f"train_fold{idx}.json")
         val_dir = os.path.join(path, f"val_fold{idx}.json")
 
@@ -69,6 +69,7 @@ def main(args):
             json.dump(val_dict, val_file)
 
     print("Done Make files")
+
 
 def update_dataset(index, mode, input_json, output_dir):
 
@@ -109,8 +110,9 @@ def update_dataset(index, mode, input_json, output_dir):
     with open(output_train_json, "w") as train_writer:
         json.dump(train_data, train_writer)
 
+
 def loop_n_split(n):
-    stratified_path = os.path.join(path, "..","data", "stratified_kfold")
+    stratified_path = os.path.join(path, "..", "data", "stratified_kfold")
     for i in range(n):
         update_dataset(
             index=i,
@@ -124,6 +126,7 @@ def loop_n_split(n):
             input_json=os.path.join(stratified_path, f"val_fold{i}.json"),
             output_dir=stratified_path,
         )
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
