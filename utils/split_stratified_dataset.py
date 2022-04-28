@@ -133,7 +133,7 @@ if __name__ == "__main__":
         type=str,
         default=os.path.join(path, "..", "data", "stratified_kfold"),
     )
-    parser.add_argument("--n_split", "-n", type=int, default=5)
+    parser.add_argument("--n_split", "-n", type=int, default=10)
     parser.add_argument("--random_seed", type=int, default=42)
     args = parser.parse_args()
     main(args)
