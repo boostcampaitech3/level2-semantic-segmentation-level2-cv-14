@@ -50,8 +50,14 @@ def main(args):
             train_dict[i] = data[i]
             val_dict[i] = data[i]
 
-        train_dict["images"] = np.array(images)[groups[train_index]].tolist()
-        val_dict["images"] = np.array(images)[groups[val_index]].tolist()
+        train_index = list(set(groups[train_index]))
+        val_index = list(set(groups[val_index]))
+
+        train_index.sort()
+        val_index.sort()
+
+        train_dict["images"] = np.array(images)[train_index].tolist()
+        val_dict["images"] = np.array(images)[val_index].tolist()
 
         train_dict["annotations"] = annotations_df[
             annotations_df["image_id"].isin(train_index)
@@ -115,7 +121,7 @@ def update_dataset(index, mode, input_json, output_dir):
 def loop_n_split(n):
     stratified_path = os.path.join(path, "..", "data", "stratified_group_kfold")
     print("image id's updating...")
-    
+
     for i in range(n):
         update_dataset(
             index=i,
