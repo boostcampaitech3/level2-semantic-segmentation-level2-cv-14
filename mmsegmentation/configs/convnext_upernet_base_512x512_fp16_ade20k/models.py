@@ -1,8 +1,8 @@
 _base_ = ['./upernet_convnext.py']
 
 model = dict(
-    decode_head=dict(in_channels=[128, 256, 512, 1024], num_classes=150),
-    auxiliary_head=dict(in_channels=512, num_classes=150),
+    decode_head=dict(in_channels=[128, 256, 512, 1024], num_classes=11),
+    auxiliary_head=dict(in_channels=512, num_classes=11),
     test_cfg=dict(mode='slide', crop_size=(512, 512), stride=(341, 341)),
 )
 
