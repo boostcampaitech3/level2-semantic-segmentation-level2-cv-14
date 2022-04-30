@@ -18,7 +18,7 @@ log_config = dict(
         init_kwargs=dict(
             # 각각 자신에 맞춰서 Project이름 설정
             project= 'Semantic_Segmentation',
-            name = '[Taeha3]ConvNeXt_XLarge_UPerNet_adamW_cosine(ADE20K)',
+            name = '[Taeha3]ConvNeXt_XLarge_UPerNet_adamW_poly(ADE20K)',
             tags = 'T',
             ),
             # log_checkpoint=True,
