@@ -79,7 +79,7 @@ def copy_images(json_path, target_path):
     
     images = json_data["images"]
     for image in images:
-        shutil.copyfile(os.path.join(ROOT, image["file_name"]), os.path.join(target_path, f"{image['id']:04}.jpg"))
+        shutil.copyfile(os.path.join(ROOT, image["file_name"]), os.path.join(target_path, f"{'_'.join(image['file_name'].split('/'))}"))
     print(f'image copy to {target_path} Success!')
 
 '''
@@ -97,7 +97,7 @@ def create_mask(json_path, target_path):
     for _, masks, image_infos in data_loader:
         mask = masks[0].numpy()
         image_info = image_infos[0]        
-        cv2.imwrite(os.path.join(target_path, f"{image_info['id']:04}.png"), mask)
+        cv2.imwrite(os.path.join(target_path, f"{'_'.join(image_info['file_name'].split('/'))[:-4]}.png"), mask)
     print(f'create mask to {target_path} Success!')
 
 def collate_fn(batch):
