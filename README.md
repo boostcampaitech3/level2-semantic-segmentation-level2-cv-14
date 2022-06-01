@@ -36,10 +36,63 @@
 
 ### TOOLS
 
+- MMSegmentation
 - Github (Custom Git-flow Branching, Issue, PR)
 - Notion
 - Slack
 - Wandb
+
+### Models
+- FCN
+- FCN8s
+- DeepLabV1
+- DeepLabV3
+- DeepLabV3Plus
+- DeconvNet
+- SegNet
+- UperNet
+- KNet
+- OCRNet
+- SegFormer
+- FPN
+
+### Backbones
+- ResNet
+- VGG16
+- Xception
+- Swin Transformer
+- HRNet
+- ConvNeXt
+- Beit
+
+### Schedulers
+- Step
+- Cosine Annealing Restart
+
+### Augmentations
+- ShiftScaleRotate
+- GridDistortion
+- Mosaic
+- TTA (Multi-scale Testing, Flip)
+
+### Data Cleansing
+```
+1. 봉투 안에 annotation 너무 상세하 되어있는거는 빼야한다.
+2. 아예 클래스 Annotation을 잘못한 경우는 폐기
+3. 애매하다 싶은거를 그냥 일반쓰레기로 한 경우 폐기
+4. 담배곽 -> 일반쓰레기 아니면 폐기
+5. 명함이나, 전단지 같은게 일반쓰레기가 아닌경우는 체크하고 내일 얘기하자
+6. 가려진 것들을 지웠는지? 아니면 나뒀는지 애매한 것들은 체크하기
+7. 기타
+```
+<img width="816" alt="image" src="https://user-images.githubusercontent.com/76461625/171345334-0d593dce-35d0-4d95-a856-56bc75ed1833.png">
+
+
+## Result
+### LB Score
+|Public   | Private  |
+|:-:|:-:|
+| 0.7985  |    0.7406 |
 
 ## Citation
 
