@@ -1,6 +1,6 @@
 # One Team
 
-![Untitled](https://user-images.githubusercontent.com/64190071/164357692-6ab59eb0-d522-495b-ba49-60221bd4f6a6.png)
+<img width="1078" alt="image" src="https://user-images.githubusercontent.com/76461625/171986705-d4cfb6a2-5bac-45d1-bd17-e6213ac66b0b.png">
 
 - 2022.04.25 ~ 2022.05.17
 - 네이버 커넥트 재단 및 Upstage에서 주관하는 비공개 대회
